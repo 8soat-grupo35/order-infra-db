@@ -6,6 +6,6 @@ Este repositório contém uma configuração Terraform e um fluxo de trabalho Gi
 
 **Requisitos**
 
-* Terraform 1.0.0 ou superior
+* Terraform 1.0 ou superior
 * AWS CLI
 * GitHub Actions
