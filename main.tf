@@ -2,8 +2,8 @@ provider "aws" {
   region = "us-east-1"  # Change to your desired region
 }
 
-resource "aws_db_instance" "order_postgres_instance" {
-  identifier           = "order-db"
+resource "aws_db_instance" "orders_postgres_instance" {
+  identifier           = "orders-db"
   allocated_storage    = 20
   engine               = "postgres"
   engine_version       = "14"    # Specify desired PostgreSQL version
@@ -38,5 +38,5 @@ resource "aws_security_group" "rds_sg" {
 }
 
 output "db_endpoint" {
-  value = aws_db_instance.postgres_instance.endpoint
+  value = aws_db_instance.orders_postgres_instance.endpoint
 }
