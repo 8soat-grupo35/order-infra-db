@@ -2,13 +2,13 @@ provider "aws" {
   region = "us-east-1"  # Change to your desired region
 }
 
-resource "aws_db_instance" "postgres_instance" {
-  identifier           = "postgres-db"
+resource "aws_db_instance" "order_postgres_instance" {
+  identifier           = "order-db"
   allocated_storage    = 20
   engine               = "postgres"
   engine_version       = "14"    # Specify desired PostgreSQL version
   instance_class       = "db.t3.micro"
-  db_name              = "fastfood"
+  db_name              = "orders"
   username             = "postgres"   # Master username
   password             = "postgres"   # Master password
   parameter_group_name = "default.postgres14"
